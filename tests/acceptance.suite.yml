@@ -14,7 +14,7 @@ modules:
         WebDriver:
             host: 172.17.42.1 # SeleniumサーバーのIP = DockerホストのIP
             port: 4444
-            url: 'http://172.17.42.1:8080/' # テスト対象のIP = これまたDockerホストのIP
+            url: 'http://172.17.42.1:8000/' # テスト対象のIP = これまたDockerホストのIP
             browser: firefox
             window_size: 1680x1050
             wait: 10
