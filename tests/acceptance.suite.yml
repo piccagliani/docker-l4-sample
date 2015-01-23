@@ -1,0 +1,22 @@
+# Codeception Test Suite Configuration
+
+# suite for acceptance tests.
+# perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+class_name: AcceptanceGirl
+modules:
+    enabled:
+        - AcceptanceHelper
+        - Db
+        - WebDriver
+    config:
+        WebDriver:
+            host: 172.17.42.1 # SeleniumサーバーのIP = DockerホストのIP
+            port: 4444
+            url: 'http://172.17.42.1:8080/' # テスト対象のIP = これまたDockerホストのIP
+            browser: firefox
+            window_size: 1680x1050
+            wait: 10
+            capabilities:
+                unexpectedAlertBehaviour: 'accept'

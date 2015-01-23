@@ -1,0 +1,17 @@
+actor: Girl
+paths:
+    tests: tests
+    log: tests/_output
+    data: tests/_data
+    helpers: tests/_support
+settings:
+    bootstrap: _bootstrap.php
+    colors: false
+    memory_limit: 1024M
+modules:
+    config:
+        Db:
+            dsn: 'mysql:host=localhost;dbname=docker-l4-sample;charset=utf8;'
+            user: 'docker-l4-sample'
+            password: 'docker-l4-sample'
+            dump: tests/_data/dump.sql
