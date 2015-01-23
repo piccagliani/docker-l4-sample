@@ -8,4 +8,4 @@ chown -R 777 storage
 mysql -u root < ./.docker/setup.sql
 
 composer install
-vendor/bin/codecept run
+vendor/bin/codecept run --debug
